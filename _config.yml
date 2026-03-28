@@ -1,0 +1,28 @@
+title: "Bino.io - The Binoio Family of Apps"
+email: "binoio@example.com"
+description: >- # this means to ignore newlines until "baseurl:"
+  A showcase for The Binoio Family of Apps. Attractive, professionally playful, and self-hosted.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://bino.io" # the base hostname & protocol for your site
+twitter_username: binoio
+github_username:  binoio
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude` property here will be ignored by Jekyll.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .ralph/
+  - PROMPT.md
+  - ralph.yml
