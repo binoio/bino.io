@@ -5,8 +5,6 @@ title: "The Binoio Family of Apps"
 
 Welcome to the Binoio Family of Apps.  Simple and fun utilities.
 
-## The Family 
-
 | App | Description |
 | :--- | :--- |
 | **[Edith](https://binoio.github.io/edith)** | An everyday text editor. |
