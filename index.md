@@ -3,7 +3,7 @@ layout: home
 title: "The Binoio Family of Apps"
 ---
 
-Welcome to the Binoio Family of Apps.  Simple and fun utilities.
+Simple and fun utilities.
 
 | App | Description |
 | :--- | :--- |
@@ -16,3 +16,7 @@ Welcome to the Binoio Family of Apps.  Simple and fun utilities.
 | **[Note Enough](https://binoio.github.io/note-enough)** | A note-taking app for iPad and Apple Pencil. |
 
 ---
+
+Independent projects of [Michael Bino](https://michaelbino.com)
+
+&copy; 2026 Michael Bino
