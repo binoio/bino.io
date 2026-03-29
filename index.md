@@ -3,7 +3,7 @@ layout: home
 title: "The Binoio Family of Apps"
 ---
 
-Welcome to the Binoio Family of Apps. Simple and fun utilities.
+Simple and fun utilities.
 
 | App | Description |
 | :--- | :--- |
@@ -14,3 +14,5 @@ Welcome to the Binoio Family of Apps. Simple and fun utilities.
 | **[ManoScroll](https://binoio.github.io/manoscroll)** | Hand-gesture scrolling. |
 | **[Note Enough](https://binoio.github.io/note-enough)** | A note-taking app for iPad and Apple Pencil. |
 | **[Outsight](https://binoio.github.io/outsight)** | Mirror a secondary display on your primary one. |
+
+&copy; 2026 Michael Bino
