@@ -44,5 +44,6 @@ Explore our portfolio:
 - Donots
 - ManoScroll
 - Note Enough
+- Prosciutto
 
 Visit [bino.io/about](https://bino.io/about) for more details.
