@@ -14,5 +14,6 @@ Simple and fun utilities.
 | **[ManoScroll](https://binoio.github.io/manoscroll)** | Hand-gesture scrolling. |
 | **[Note Enough](https://binoio.github.io/note-enough)** | A note-taking app for iPad and Apple Pencil. |
 | **[Outsight](https://binoio.github.io/outsight)** | Mirror a secondary display on your primary one. |
+| **[Prosciutto](https://github.com/binoio/Prosciutto)** | A web app for viewing unified mailboxes across Gmail accounts. |
 
 &copy; 2026 Michael Bino
