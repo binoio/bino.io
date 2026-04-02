@@ -1,6 +1,6 @@
 # Bino.io - The Binoio Family of Apps
 
-Welcome to the public repository for [bino.io](https://bino.io). This site showcases our portfolio of apps, provides information about our philosophy, and features our blog.
+The landing page for the Binoio Family of Apps.
 
 ## Developer Workflow
 
