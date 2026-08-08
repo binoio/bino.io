@@ -3,71 +3,188 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>The Binoio Family of Apps - Bino.io - The Binoio Family of Apps</title>
+  <title>Bino.io - The Binoio Family of Apps</title>
+  <meta name="description" content="A showcase for The Binoio Family of Apps. Attractive, professionally playful, and self-hosted.">
   <style>
-    html,body{margin:0;padding:0;width:100%}
-    body{padding:1rem;font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
-    .site-header{margin-bottom:1rem}
-    .site-title{font-size:1.5rem;margin:0;text-align:left}
-    main{max-width:none;padding:0;margin:0;text-align:left}
-    table{border-collapse:collapse}
-    table th, table td{padding:.25rem .5rem;text-align:left}
+    /* Shared design language of the binoio.github.io product pages:
+       system font, #1d1d1f/#86868b text, hairline borders, 12px radii. */
+    :root {
+      --bg: #ffffff;
+      --fg: #1d1d1f;
+      --secondary: #86868b;
+      --border: #d2d2d7;
+      --card-bg: #f5f5f7;
+      --radius: 16px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0b0f;
+        --fg: #f5f5f7;
+        --secondary: #a0a0a5;
+        --border: #2a2a30;
+        --card-bg: #16161c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+                   Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main { flex: 1; width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    .hero { text-align: center; padding: 72px 0 40px; }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+    .hero p { font-size: clamp(1.05rem, 2.5vw, 1.35rem); color: var(--secondary); margin: 0; }
+    /* One dot per app, in its accent — the family, at a glance. */
+    .family-dots { display: flex; justify-content: center; gap: 9px; margin-top: 26px; }
+    .family-dots span { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 24px 0 56px;
+    }
+    .card {
+      --accent: #007aff;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--fg);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .card:hover, .card:focus-visible {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 28px -12px color-mix(in srgb, var(--accent) 55%, transparent);
+      outline: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card, .card:hover { transition: none; transform: none; }
+    }
+    .card .mark {
+      width: 56px; height: 56px;
+      border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.75rem; font-weight: 700;
+      background: var(--accent); color: #fff;
+      overflow: hidden;
+    }
+    .card .mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card h2 { font-size: 1.1rem; font-weight: 650; margin: 0; letter-spacing: -0.01em; }
+    .card p { font-size: .92rem; line-height: 1.45; color: var(--secondary); margin: 0; flex: 1; }
+    .card .go { font-size: .9rem; font-weight: 600; color: var(--accent); }
+    .card .go::after { content: " →"; transition: margin-left .18s ease; }
+    .card:hover .go::after { margin-left: 4px; }
+
+    /* Per-product identity, echoing each landing page. */
+    .card.donots      { background: #faf8f5; }
+    .card.note-enough { background: #fffbf0; }
+    .card.edith .mark { background: #E6E6FA; color: #2D3748; }
+    /* Kona's landing page is dark-roast themed; its card matches in both modes. */
+    .card.kona { background: #1a1a2e; border-color: #2a2a3e; color: #f5f5f7; }
+    .card.kona p { color: #a0a0a5; }
+    @media (prefers-color-scheme: dark) {
+      .card.donots      { background: #1c1813; }
+      .card.note-enough { background: #1f1a10; }
+    }
+
+    footer { text-align: center; color: var(--secondary); font-size: .85rem; padding: 28px 0 36px; }
   </style>
 </head>
 <body>
-  <header class="site-header" role="banner">
-  <h1 class="site-title">The Binoio Family of Apps</h1>
-</header>
-
   <main>
-    <p>Simple and fun utilities.</p>
+    <section class="hero">
+  <h1>The Binoio Family of Apps</h1>
+  <p>Simple and fun utilities.</p>
+  <div class="family-dots" aria-hidden="true">
+    <span style="background:#00A2FF"></span>
+    <span style="background:#007aff"></span>
+    <span style="background:#B8A9C9"></span>
+    <span style="background:#e94560"></span>
+    <span style="background:#007aff"></span>
+    <span style="background:#FF9500"></span>
+    <span style="background:#0071e3"></span>
+    <span style="background:#d93025"></span>
+  </div>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">App</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/atmo">Atmo</a></strong></td>
-      <td style="text-align: left">An Apple TV remote for macOS.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/donots">Donots</a></strong></td>
-      <td style="text-align: left">Send email for every notification.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/edith">Edith</a></strong></td>
-      <td style="text-align: left">An everyday text editor.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/kona">Kona</a></strong></td>
-      <td style="text-align: left">Prevent system sleep.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/manoscroll">ManoScroll</a></strong></td>
-      <td style="text-align: left">Hand-gesture scrolling.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/note-enough">Note Enough</a></strong></td>
-      <td style="text-align: left">A note-taking app for iPad and Apple Pencil.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/outsight">Outsight</a></strong></td>
-      <td style="text-align: left">Mirror a secondary display on your primary one.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><strong><a href="https://binoio.github.io/Prosciutto">Prosciutto</a></strong></td>
-      <td style="text-align: left">A web app for viewing unified mailboxes across Gmail accounts.</td>
-    </tr>
-  </tbody>
-</table>
+<section class="grid">
+  <a class="card atmo" href="https://binoio.github.io/atmo" style="--accent:#00A2FF">
+    <span class="mark"><img src="https://binoio.github.io/atmo/assets/images/favicon.svg" alt="" loading="lazy"></span>
+    <h2>Atmo</h2>
+    <p>An Apple TV remote for macOS.</p>
+    <span class="go">Visit Atmo</span>
+  </a>
 
-<p>© 2026 Michael Bino</p>
+  <a class="card donots" href="https://binoio.github.io/donots" style="--accent:#007aff">
+    <span class="mark"><img src="https://binoio.github.io/donots/icon.png" alt="" loading="lazy"></span>
+    <h2>Donots</h2>
+    <p>Send email for every notification.</p>
+    <span class="go">Visit Donots</span>
+  </a>
 
+  <a class="card edith" href="https://binoio.github.io/edith" style="--accent:#B8A9C9">
+    <span class="mark">E</span>
+    <h2>Edith</h2>
+    <p>An everyday text editor.</p>
+    <span class="go">Visit Edith</span>
+  </a>
+
+  <a class="card kona" href="https://binoio.github.io/kona" style="--accent:#e94560">
+    <span class="mark" style="background:#4b3621">&#9749;</span>
+    <h2>Kona</h2>
+    <p>Prevent system sleep.</p>
+    <span class="go">Visit Kona</span>
+  </a>
+
+  <a class="card manoscroll" href="https://binoio.github.io/manoscroll" style="--accent:#007aff">
+    <span class="mark">&#9995;</span>
+    <h2>ManoScroll</h2>
+    <p>Hand-gesture scrolling.</p>
+    <span class="go">Visit ManoScroll</span>
+  </a>
+
+  <a class="card note-enough" href="https://binoio.github.io/note-enough" style="--accent:#FF9500">
+    <span class="mark">&#9997;&#65039;</span>
+    <h2>Note Enough</h2>
+    <p>A note-taking app for iPad and Apple Pencil.</p>
+    <span class="go">Visit Note Enough</span>
+  </a>
+
+  <a class="card outsight" href="https://binoio.github.io/outsight" style="--accent:#0071e3">
+    <span class="mark"><img src="https://binoio.github.io/outsight/icon.png" alt="" loading="lazy"></span>
+    <h2>Outsight</h2>
+    <p>Mirror a secondary display on your primary one.</p>
+    <span class="go">Visit Outsight</span>
+  </a>
+
+  <a class="card prosciutto" href="https://binoio.github.io/Prosciutto" style="--accent:#d93025">
+    <span class="mark">P</span>
+    <h2>Prosciutto</h2>
+    <p>A web app for viewing unified mailboxes across Gmail accounts.</p>
+    <span class="go">Visit Prosciutto</span>
+  </a>
+</section>
 
   </main>
+  <footer>&copy; 2026 Michael Bino</footer>
 </body>
 </html>
