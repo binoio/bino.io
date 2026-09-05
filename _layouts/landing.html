@@ -51,11 +51,35 @@
     .family-dots { display: flex; justify-content: center; gap: 9px; margin-top: 26px; }
     .family-dots span { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
 
+    .app-section {
+      padding: 8px 0 36px;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-header h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin: 0;
+      color: var(--fg);
+    }
+    .section-header p {
+      font-size: 0.95rem;
+      color: var(--secondary);
+      margin: 0;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 20px;
-      padding: 24px 0 56px;
+      padding: 0 0 8px;
     }
     .card {
       --accent: #007aff;
