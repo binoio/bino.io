@@ -115,6 +115,43 @@
     .card h2 { font-size: 1.1rem; font-weight: 650; margin: 0; letter-spacing: -0.01em; }
     .card p { font-size: .92rem; line-height: 1.45; color: var(--secondary); margin: 0; flex: 1; }
 
+    /* Web Apps: wide, low-profile rectangular tiles */
+    .grid.grid-wide {
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 16px;
+    }
+    .card.card-wide {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+    }
+    .card.card-wide .mark {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 12px;
+      font-size: 1.5rem;
+    }
+    .card.card-wide .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 0;
+    }
+    .card.card-wide .card-content h2 {
+      font-size: 1.05rem;
+      font-weight: 650;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .card.card-wide .card-content p {
+      font-size: 0.86rem;
+      line-height: 1.38;
+      color: var(--secondary);
+      margin: 0;
+    }
+
     /* Per-product identity, echoing each landing page. */
     .card.donots      { background: #faf8f5; }
     .card.note-enough { background: #fffbf0; }
@@ -153,23 +190,29 @@
   <div class="section-header">
     <h2>Web Apps</h2>
   </div>
-  <div class="grid">
-    <a class="card fc" href="https://fc.bino.io" style="--accent:#16a34a">
+  <div class="grid grid-wide">
+    <a class="card card-wide fc" href="https://fc.bino.io" style="--accent:#16a34a">
       <span class="mark">&#9917;</span>
-      <h2>Bino.io FC</h2>
-      <p>Rec soccer coaching, practice schedules, and sideline play visualizer.</p>
+      <div class="card-content">
+        <h2>Bino.io FC</h2>
+        <p>Rec soccer coaching, practice schedules, and sideline play visualizer.</p>
+      </div>
     </a>
 
-    <a class="card prosciutto" href="/Prosciutto/" style="--accent:#d93025">
+    <a class="card card-wide prosciutto" href="/Prosciutto/" style="--accent:#d93025">
       <span class="mark">P</span>
-      <h2>Prosciutto</h2>
-      <p>A web app for viewing unified mailboxes across Gmail accounts.</p>
+      <div class="card-content">
+        <h2>Prosciutto</h2>
+        <p>A web app for viewing unified mailboxes across Gmail accounts.</p>
+      </div>
     </a>
 
-    <a class="card calpal" href="https://mabino.github.io/calpal/" style="--accent:#4f46e5">
+    <a class="card card-wide calpal" href="https://mabino.github.io/calpal/" style="--accent:#4f46e5">
       <span class="mark">&#128197;</span>
-      <h2>CalPal</h2>
-      <p>Translate calendar links between Google, Apple, and Outlook.</p>
+      <div class="card-content">
+        <h2>CalPal</h2>
+        <p>Translate calendar links between Google, Apple, and Outlook.</p>
+      </div>
     </a>
   </div>
 </section>
