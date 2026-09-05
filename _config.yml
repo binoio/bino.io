@@ -1,7 +1,7 @@
-title: "Bino.io - The Binoio Family of Apps"
+title: "Bino.io Apps"
 email: "binoio@example.com"
 description: >- # this means to ignore newlines until "baseurl:"
-  A showcase for The Binoio Family of Apps. Attractive, professionally playful, and self-hosted.
+  A showcase for Bino.io Apps. Simple, fun tools.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bino.io" # the base hostname & protocol for your site
 twitter_username: binoio
