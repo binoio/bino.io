@@ -39,6 +39,7 @@ Ensure your web server (e.g., Nginx or Apache) is configured to serve files from
 Explore our portfolio:
 - Edith
 - Outsight
+- Sockystick
 - Kona
 - Atmo
 - Donots
