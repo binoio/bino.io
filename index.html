@@ -92,16 +92,15 @@
       border-radius: var(--radius);
       text-decoration: none;
       color: var(--fg);
-      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      transition: border-color .18s ease, box-shadow .18s ease;
     }
     .card:hover, .card:focus-visible {
-      transform: translateY(-3px);
       border-color: var(--accent);
       box-shadow: 0 10px 28px -12px color-mix(in srgb, var(--accent) 55%, transparent);
       outline: none;
     }
     @media (prefers-reduced-motion: reduce) {
-      .card, .card:hover { transition: none; transform: none; }
+      .card, .card:hover { transition: none; }
     }
     .card .mark {
       width: 56px; height: 56px;
@@ -183,7 +182,7 @@
     <span style="background:#0071e3"></span>
     <span style="background:#157878"></span>
     <span style="background:#10B981"></span>
-    <span style="background:#FF6D2D"></span>
+    <span style="background:#8D6E63"></span>
     <span style="background:#5E5CE6"></span>
     <span style="background:#E0A458"></span>
   </div>
@@ -271,7 +270,7 @@
       <p>Mirror a secondary display on your primary one.</p>
     </a>
 
-    <a class="card overland" href="/overland/" style="--accent:#FF6D2D">
+    <a class="card overland" href="/overland/" style="--accent:#8D6E63">
       <span class="mark"><img src="/overland/icon.png" alt="" loading="lazy"></span>
       <h2>Overland</h2>
       <p>OpenConnect-based VPN client for the menu bar.</p>
