@@ -42,6 +42,7 @@ Explore our portfolio:
 - Sockystick
 - Kona
 - Atmo
+- Ensconce
 - Donots
 - ManoScroll
 - Note Enough
